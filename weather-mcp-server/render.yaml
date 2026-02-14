@@ -1,0 +1,10 @@
+services:
+  # 定义一个 Web 服务
+  - type: web
+    name: weather-mcp-server        # 你的服务名称，可以自定义
+    runtime: python                  # 运行环境是 Python
+    buildCommand: pip install -r requirements.txt # 安装依赖的命令
+    startCommand: python main.py     # 启动服务的命令
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0               # 指定 Python 版本
